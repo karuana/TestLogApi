@@ -26,6 +26,11 @@ router.post('/', function (req, res) {
     res.json({
         responseResult: {
             result: 0
+        },
+        "packet" : {
+            "id":"log",
+            "content":{
+            }
         }
     });
 
