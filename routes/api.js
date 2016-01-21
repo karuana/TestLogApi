@@ -33,7 +33,7 @@ router.post('/', function (req, res) {
 
 router.get('/clear', function (req, res) {
 
-    fs_ext.emptyDir(baseDirectory, (err)=>{
+    fs_ext.emptyDir(baseDirectory, function(err) {
         if(err) {
             console.log(err);
         }
