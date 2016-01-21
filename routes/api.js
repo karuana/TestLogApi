@@ -12,7 +12,7 @@ router.post('/', function (req, res) {
 
     var timestamp = mement().format('YYYY_MM_DD_HH_mm_ss');
 
-    jsonfile.writeFile(baseDirectory + timestamp + "_" + content.uuid + ".log", function(err) {
+    jsonfile.writeFile(baseDirectory + timestamp + "_" + content.uuid + ".log", content, function(err) {
       console.error(err);
     });
 
