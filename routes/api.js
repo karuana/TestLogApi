@@ -8,7 +8,7 @@ var router = express.Router();
 var baseDirectory = "storage/"
 
 router.post('/', function (req, res) {
-    var content = ( !_.isUndefined(req.body.content) ) ? JSON.parse(req.body.content) : undefined;
+    var content = ( !_.isUndefined(req.body) ) ? req.body: undefined;
     if (!_.isUndefined(content) && !_.isUndefined(content.uuid) && _.isArray(content.logList)) {
 
         var timestamp = mement().format('YYYYMMDDHHmmss');
